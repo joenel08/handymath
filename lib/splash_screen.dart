@@ -44,18 +44,14 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> _checkUserData() async {
     final prefs = await SharedPreferences.getInstance();
     final username = prefs.getString('username');
-    final age = prefs.getInt('age');
+    final age = prefs.getString('ageRange');
 
     if (username != null && username.isNotEmpty && age != null) {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const GameMenu()),
-      );
+      // Use named route instead of MaterialPageRoute
+      Navigator.pushReplacementNamed(context, '/game_menu');
     } else {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
-      );
+      // Use named route instead of MaterialPageRoute
+      Navigator.pushReplacementNamed(context, '/home');
     }
   }
 

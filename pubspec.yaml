@@ -30,8 +30,24 @@ flutter:
   - assets/bubble.png
   - assets/age_bg.png
   - assets/home_bg.jpg
+  - assets/game_bg.png
   - assets/character.png
+  - assets/character_half.png
+  - assets/character_think.png
+  - assets/tracing_logo.png
+  - assets/matching_logo.png
+  - assets/number_order.png
+  - assets/number_memory.png
+  - assets/number_hunt.png
+  - assets/settings_icon.png
+  - assets/checkmark.png
   - assets/fonts/PencilChild.ttf
+  - assets/hand_icon.png
+
+  - assets/zero.png
+  - assets/one.png
+
+
 
   fonts:
     - family: PencilChild

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:handymath/custom_button.dart';
 import 'dart:async';
 import 'user_info_screen.dart';
 
@@ -20,7 +21,12 @@ class _HomeScreenState extends State<HomeScreen>
 
   final List<String> _introTexts = [
     "Hi there! 👋 \nWelcome to HandyMath!",
-    "I'm Ms. Math. We will have so much fun learning together!"
+    "I'm Ms. Math. We will have so much fun learning together!",
+    "Math isn't just numbers—it's a way of thinking, solving, and exploring!",
+    "Don't worry if it seems tricky at first. I'm here to guide you every step of the way.",
+    "We'll play with patterns, crack puzzles, and discover cool tricks!",
+    "Every mistake is a chance to learn something new. So be brave and curious!",
+    "Ready to become a HandyMath hero? Let's dive in! 💪📚"
   ];
 
   @override
@@ -146,17 +152,10 @@ class _HomeScreenState extends State<HomeScreen>
           Positioned(
             bottom: 40,
             right: 40,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
-                elevation: 6,
-                shadowColor: Colors.black54,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              ),
+            child: EmbossedButton(
+              text: "Skip",
+              width: 150, // optional: adjust or remove to auto-size
+              color: Color(0xFF479718), // dynamic color
               onPressed: () {
                 _typingTimer?.cancel();
                 _mouthController.stop();
@@ -165,14 +164,6 @@ class _HomeScreenState extends State<HomeScreen>
                   MaterialPageRoute(builder: (_) => const UserInfoScreen()),
                 );
               },
-              child: const Text(
-                "Skip",
-                style: TextStyle(
-                  fontFamily: 'PencilChild',
-                  fontSize: 20,
-                  color: Colors.white,
-                ),
-              ),
             ),
           ),
         ],
